@@ -74,15 +74,6 @@ biomed_image_classification_lc25000/
     ├── evaluate.py
     ├── infer.py
     └── utils.py
-```
-
----
-
-## Tips to hit CE ≈ 0.42
-- Use `efficientnet_b0`, image size 224–256, label smoothing 0.05, strong color/rotation jitter.
-- Train ~20–30 epochs with cosine LR, early stopping patience ~5.
-- Use K-fold CV and average the CE across folds to report.
-
 ---
 
 ## License & Data Use
