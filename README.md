@@ -85,5 +85,5 @@ biomed_image_classification_lc25000/
 
 ---
 
-## 📝 License & Data Use
+## License & Data Use
 Code: MIT. Dataset: follow data source license/terms (Kaggle/LC25000). This repo does **not** redistribute LC25000 due to licensing & size.
