@@ -1,0 +1,28 @@
+seed: 42
+
+data:
+  root_dir: "data/lc25000"
+  train_dir: "data/lc25000/train"
+  val_dir: "data/lc25000/val"
+  test_dir: "data/lc25000/test"
+  img_size: 224
+  num_classes: 5
+  class_names: ["colon_aca","colon_n","lung_aca","lung_scc","lung_n"]
+
+train:
+  model_name: "resnet18"   # options: resnet18, efficientnet_b0
+  batch_size: 32
+  epochs: 25
+  lr: 3.0e-4
+  weight_decay: 1.0e-4
+  label_smoothing: 0.05
+  dropout: 0.2
+  amp: true
+  num_workers: 4
+  early_stopping_patience: 5
+  scheduler: "cosine"      # cosine | onecycle | none
+  k_folds: 0               # 0 = single split using train/val dirs; >0 = StratifiedKFold
+
+output:
+  dir: "artifacts"
+  save_best_only: true
